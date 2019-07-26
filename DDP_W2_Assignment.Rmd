@@ -1,0 +1,30 @@
+---
+title: "DDP_W2_Assignment"
+author: "Jordi Cabral"
+date: "7/26/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(leaflet)
+
+my_icon <- makeIcon(
+  iconUrl = "https://sagradafamilia.org/image/layout_set_logo?img_id=356046&t=1564082284643",
+  iconWidth = 170, iconHeight = 100,
+  iconAnchorX = 0, iconAnchorY = 0
+)
+
+my_map <- leaflet() %>%
+  addTiles()
+my_map <- my_map %>%
+  addMarkers(lat=41.403767, lng=2.174576,
+             icon = my_icon, popup = c("<a href='https://sagradafamilia.org/'> La Sagrada Familia</a>"))
+
+my_map
+
+```
+
