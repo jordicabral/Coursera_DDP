@@ -1,4 +1,4 @@
-# DDP Coursera - Project TEST
+# DDP Coursera - Project
 
 library(shiny)
 library(faraway)
